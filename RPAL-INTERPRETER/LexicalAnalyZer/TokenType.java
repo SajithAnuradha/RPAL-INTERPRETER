@@ -1,4 +1,4 @@
-package LexicalAnalyser;
+package LexicalAnalyZer;
 
 public enum TokenType {
     KEYWORD,
@@ -7,6 +7,6 @@ public enum TokenType {
     OPERATOR,
     STRING,
     PUNCTUATION,
-    DELETE
-
+    DELETE,
+    EndOfTokens
 }
