@@ -13,17 +13,17 @@ public class TestParser {
 	    List<Node> AST;   
 			try {
 				tokens = scanner.scan();
-//				for (Token token : tokens) {
-//		            System.out.println("<" + token.type + ", " + token.value + ">");
-//		        }
+				// for (Token token : tokens) {
+		        //     System.out.println("<" + token.type + ", " + token.value + ">");
+		        // }
 				Parser parser = new Parser(tokens);
 				AST=parser.parse();
 				if(AST==null) return;
 				// Print the generated tokens
 		        
-//				for (Node node : AST) {
-//		            System.out.println("<" + node.type + ", " + node.value + ", " + node.noOfChildren+">");
-//		        }		
+				// for (Node node : AST) {
+		        //     System.out.println("<" + node.type + ", " + node.value + ", " + node.noOfChildren+">");
+		        // }		
 				List<String> stringAST = parser.convertAST_toStringAST();
 				for (String string : stringAST) {
 		            System.out.println(string);
