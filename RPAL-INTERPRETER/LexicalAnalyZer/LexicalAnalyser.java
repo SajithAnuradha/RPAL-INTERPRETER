@@ -50,7 +50,7 @@ public class LexicalAnalyser {
         Pattern operatorPattern = Pattern.compile(operatorSymbol + "+");
 
         Pattern punctuationPattern = Pattern.compile("[(),;]");
-        Pattern spacesPattern = Pattern.compile("(\s|\t)+");
+        Pattern spacesPattern = Pattern.compile("(\\s|\\t)+");
 
         Pattern stringPattern = Pattern.compile("'(" + letter + "|" + digit + "|" + operatorSymbol + "|" + escape + "|"
                 + punctuationPattern + "|" + spacesPattern + ")*'");
@@ -70,13 +70,13 @@ public class LexicalAnalyser {
             Matcher commentMatcher = commentPattern.matcher(line.substring(currentIndex));
             if (commentMatcher.lookingAt()) {
                 String comment = commentMatcher.group();
-                tokenList.add(new Token(TokenType.DELETE, comment));
+                //tokenList.add(new Token(TokenType.DELETE, comment));
                 currentIndex += comment.length();
                 continue;
             }
             if (spaceMatcher.lookingAt()) {
                 String space = spaceMatcher.group();
-                tokenList.add(new Token(TokenType.DELETE, space));
+                //tokenList.add(new Token(TokenType.DELETE, space));
                 currentIndex += space.length();
                 continue;
             }
