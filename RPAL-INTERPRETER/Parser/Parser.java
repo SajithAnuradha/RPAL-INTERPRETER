@@ -478,7 +478,11 @@ public class Parser {
 			AST.add(new Node(NodeType.identifier,tokensList.get(0).value,0));
 			tokensList.remove(0);
 			n++;
-		} while (tokensList.get(0).value.equals(","));
-		AST.add(new Node(NodeType.comma,",",n));	
+		} 
+		
+		while (tokensList.get(0).value.equals(","));
+		if (n!=1){
+			AST.add(new Node(NodeType.comma,",",n));	
+		}
 	}
 }
