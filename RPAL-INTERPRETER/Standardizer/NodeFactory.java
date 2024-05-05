@@ -3,11 +3,11 @@ package Standardizer;
 import java.util.ArrayList;
 
 public class NodeFactory {
-    
+
     public NodeFactory() {
-        
+
     }
-    
+
     public static Node getNode(String data, int depth) {
         Node node = new Node();
         node.setData(data);
@@ -15,7 +15,7 @@ public class NodeFactory {
         node.children = new ArrayList<Node>();
         return node;
     }
-    
+
     public static Node getNode(String data, int depth, Node parent, ArrayList<Node> children, boolean isStandardize) {
         Node node = new Node();
         node.setData(data);

@@ -70,13 +70,13 @@ public class LexicalAnalyser {
             Matcher commentMatcher = commentPattern.matcher(line.substring(currentIndex));
             if (commentMatcher.lookingAt()) {
                 String comment = commentMatcher.group();
-                //tokenList.add(new Token(TokenType.DELETE, comment));
+                // tokenList.add(new Token(TokenType.DELETE, comment));
                 currentIndex += comment.length();
                 continue;
             }
             if (spaceMatcher.lookingAt()) {
                 String space = spaceMatcher.group();
-                //tokenList.add(new Token(TokenType.DELETE, space));
+                // tokenList.add(new Token(TokenType.DELETE, space));
                 currentIndex += space.length();
                 continue;
             }
