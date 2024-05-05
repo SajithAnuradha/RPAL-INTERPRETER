@@ -1,12 +1,12 @@
 import Engine.Evaluvator;
 
-public class rpal21 {
+public class myrpal {
     public static void main(String[] args) {
         String fn;
         boolean isPrintAST = false, isPrintST = false;
         if (args.length == 0) {
             fn = "input.txt";
-            isPrintAST = true;
+            isPrintAST = false;
             isPrintST = false;
 
         } else if (args.length == 3 && ((args[0].equalsIgnoreCase("-ast") && args[1].equalsIgnoreCase("-st")) ||
