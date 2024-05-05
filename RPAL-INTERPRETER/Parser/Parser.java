@@ -481,7 +481,7 @@ public class Parser {
 		} 
 		
 		while (tokensList.get(0).value.equals(","));
-		if (n!=1){
+		if (n>1){
 			AST.add(new Node(NodeType.comma,",",n));	
 		}
 	}
